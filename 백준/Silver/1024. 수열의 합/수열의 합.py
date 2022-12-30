@@ -10,9 +10,11 @@ def check_answer(n, l, sum):
         print(-1)
         return 1
     elif (n - sum) % l == 0:  # 정답
+        answer = []
         quotient = int((n - sum) / l)
         for i in range(l):
-            print(quotient + i, end=" ")
+            answer.append(quotient + i)
+        print(*answer)
         return 1
     else:
         return 0
