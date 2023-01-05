@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     k = int(input())
     words = []
-    running = True
+    flag = True
     for i in range(k):
         words.append(list(input()))
     for i in range(k):
@@ -11,29 +11,21 @@ for _ in range(int(input())):
             else:
                 combine_word = words[i] + words[j]
             ans = True
-            if len(combine_word) % 2 == 0:
-                for u in range(len(combine_word) // 2):
-                    if combine_word[u] != combine_word[len(combine_word) - 1 - u]:
-                        ans = False
-                        break
-                if ans:
-                    print("".join(combine_word))
-                    running = False
+            left = 0
+            right = len(combine_word) - 1
+            while left < right:
+                if combine_word[left] != combine_word[right]:
+                    ans = False
                     break
-            else:
-                for u in range(len(combine_word) // 2):
-                    if combine_word[u] != combine_word[len(combine_word) - 1 - u]:
-                        ans = False
-                        break
-                if ans:
-                    print("".join(combine_word))
-                    running = False
-                    break
-            if not running:
+                left += 1
+                right -= 1
+            if ans:
+                print("".join(combine_word))
+                flag = False
                 break
-        if not running:
+        if not flag:
             break
-    if not running:
+    if not flag:
         continue
     else:
         print(0)
