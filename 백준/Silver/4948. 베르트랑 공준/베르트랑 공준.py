@@ -3,14 +3,14 @@ import sys
 input = sys.stdin.readline
 
 
-def find_primes(n):
-    if n == 0:
-        return -1
+def find_primes(o):
+    if o == 0:
+        exit()
     count = 0
-    for i in range(n + 1, 2 * n + 1):
-        if sieve[i] == 1:
+    for k in range(o + 1, o * 2 + 1):
+        if sieve[k]:
             count += 1
-    return count
+    print(count)
 
 
 n = 123456 * 2 + 1
@@ -18,13 +18,9 @@ n = 123456 * 2 + 1
 sieve = [True] * n
 m = int(n ** 0.5)
 for i in range(2, m + 1):
-    if sieve[i] == True:  # i가 소수인 경우
-        for j in range(i + i, n, i):  # i이후 i의 배수들을 False 판정
+    if sieve[i]:
+        for j in range(i + i, n, i):
             sieve[j] = False
 
 while True:
-    ans = find_primes(int(input()))
-    if ans == -1:
-        break
-    else:
-        print(ans)
+    find_primes(int(input()))
