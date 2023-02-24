@@ -17,13 +17,9 @@ fn = input()
 
 for i in range(n):
     if fn[i] == 'R':
-        facing += 1
-        if facing == 5:
-            facing = 1
+        facing = facing % 4 + 1
     elif fn[i] == 'L':
-        facing -= 1
-        if facing == 0:
-            facing = 4
+        facing = (facing + 2) % 4 + 1
     elif fn[i] == 'F':
         if facing == 1:
             hongjun_y += 1
