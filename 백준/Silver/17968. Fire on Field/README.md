@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2023년 11월 21일 22:56:30
+2023년 12월 26일 22:29:01
 
 ### 문제 설명
 
@@ -26,7 +26,7 @@
 
 <p>This sequence is called “fire on field” or “forest fire” since the scatter plot of the sequence looks like spreading fire on a field. See the figure below.</p>
 
-<p style="text-align: center;"><img alt="" src="" style="width: 464px; height: 324px;"></p>
+<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/54909aee-bd6b-4c80-899e-2b11fbc75251/-/preview/" style="width: 464px; height: 324px;"></p>
 
 <p>Given a non-negative integer <em>n</em>, write a program to output <em>A</em>[<em>n</em>].</p>
 
